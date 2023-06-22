@@ -1,0 +1,6 @@
+.toolbar{
+    background-color: black;
+    max-width: 100px;
+    height: 100vh;
+    position: fixed;
+}
