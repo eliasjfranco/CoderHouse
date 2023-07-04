@@ -1,0 +1,10 @@
+<div>
+    <li *ngFor="let a of alumn">
+        <span *ngIf="showBackground; else backgroundRed" style="background-color: yellow;">Alumno: {{a}}</span>
+        <ng-template #backgroundRed>
+            <span style="background-color: red;">Alumno: {{a}}</span>
+        </ng-template>
+    </li>
+
+    <button (click)="changeBackground()">Cambiar fondo Alumnos</button>
+</div>
