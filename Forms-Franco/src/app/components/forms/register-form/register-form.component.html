@@ -1,0 +1,73 @@
+<div class="container">
+    <form [formGroup]="registerModel">
+        <div class="col-md-6">
+            <label for="input-email" class="form-label">Email</label>
+            <input
+                formControlName="email"
+                type="email"
+                class="form-control"
+                [class.is-invalid]="emailControl.invalid"
+                id="input-email"
+            />
+            <div class="invalid-feedback">
+                El campo es requerido
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="input-password" class="form-label">Password</label>
+            <input
+                formControlName="password"
+                type="password"
+                class="form-control"
+                id="input-password"
+                [class.is-invalid]="passwordControl.invalid"
+            />
+            <div class="invalid-feedback">
+                El campo es requerido
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="input-city" class="form-label">Ciudad</label>
+            <input
+                formControlName="city"
+                type="text"
+                class="form-control"
+                id="input-city"
+                [class.is-invalid]="cityControl.invalid"
+            />
+            <div class="invalid-feedback">
+                El campo es requerido
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="input-address" class="form-label">Direcci&oacute;n</label>
+            <input
+                formControlName="address"
+                type="text"
+                class="form-control"
+                id="input-address"
+                [class.is-invalid]="addressControl.invalid"
+            />
+            <div class="invalid-feedback">
+                El campo es requerido
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="input-phone" class="form-label">Tel&eacute;fono</label>
+            <input
+                formControlName="phone"
+                type="text"
+                class="form-control"
+                id="input-phone"
+                [class.is-invalid]="phoneControl.invalid"
+            />
+            <div class="invalid-feedback">
+                El campo es requerido
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary"
+            [disabled]="!registerModel.valid"
+            (click)="sendRegister()"
+        >Registrar</button>
+    </form>
+</div>
